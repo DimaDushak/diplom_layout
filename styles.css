@@ -123,8 +123,15 @@ input::placeholder {
 		border: 1px solid #fc557c;
 		border-radius: 20px;
 		margin: 100px auto;
-		width: 0;
-		height: 0;
+		width: 285px;
+	}
+
+	.popup_order-call {
+		height: 355px;
+	}
+
+	.popup_order-project {
+		height: 435px;
 	}
 
 		.popup-container__button_close {

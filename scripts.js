@@ -57,40 +57,24 @@ $(function(){
 	$('body').on('click', '.button_call, .header_right__button_call-icon', function(){
 		disableScroll();
 		$('.popup-container_call').fadeIn();
-		$('.popup_order-call').animate({
-			'width': '285px',
-			'height': '355px'
-		});
 	});
 
 	$('body').on('click', '.popup-container_call', function(event){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
-			$('.popup_order-call').animate({
-				'width': '0',
-				'height': '0'
-			});	
 		}
 	});
 
 	$('body').on('click', '.examples-block__button, .top-background-block__button, .what-i-to-do-block__button ', function(){
 		disableScroll();
 		$('.popup-container_project').fadeIn();
-		$('.popup_order-project').animate({
-			'width': '285px',
-			'height': '435px'
-		});
 	});
 
 	$('body').on('click', '.popup-container_project', function(event){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
-			$('.popup_order-project').animate({
-				'width': '0',
-				'height': '0'
-			});	
 		}
 	});
 
