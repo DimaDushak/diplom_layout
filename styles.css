@@ -177,7 +177,7 @@ input::placeholder {
 					.header_left__button_close-menu {
 						border: 0;
 						background-color: transparent;
-						color: linear-gradient(to top right, #ff8a5d, #ff2f96);
+						color: #ff2f96;
 						font-weight: 700;
 						font-size: 25px;
 						width: 30px;
