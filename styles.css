@@ -125,6 +125,7 @@ input::placeholder {
 		margin: 100px auto;
 		width: 0;
 		height: 0;
+		position: relative;
 	}
 
 		.popup-container__button_close {
@@ -132,6 +133,9 @@ input::placeholder {
 			color: #f53f4f;
 			float: right;
 			border: 0;
+			position: absolute;
+			top: 5px;
+			right: 15px;
 		}
 
 		.popup__input_tel:valid {
