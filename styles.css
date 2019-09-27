@@ -108,7 +108,7 @@ input::placeholder {
 	width: 100%;
 }
 
-.popup-container-call, .popup-container-project  {
+.popup-container_call, .popup-container_project  {
 	display: none;
 	position: fixed;
 	width: 100%;
@@ -117,7 +117,7 @@ input::placeholder {
 	z-index: 100;
 }
 
-	.popup-order-call, .popup-order-project {
+	.popup_order-call, .popup_order-project {
 		padding: 20px;
 		background-color: #fbfbfb;
 		border: 1px solid #fc557c;
@@ -126,6 +126,13 @@ input::placeholder {
 		width: 0;
 		height: 0;
 	}
+
+		.popup-container__button_close {
+			background: transparent;
+			color: #f53f4f;
+			float: right;
+			border: 0;
+		}
 
 		.popup__input_tel:valid {
 			background-color: rgb(247, 245, 192);

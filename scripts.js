@@ -56,18 +56,18 @@ $(function(){
 
 	$('body').on('click', '.button_call, .header_right__button_call-icon', function(){
 		disableScroll();
-		$('.popup-container-call').fadeIn();
-		$('.popup-order-call').animate({
+		$('.popup-container_call').fadeIn();
+		$('.popup_order-call').animate({
 			'width': '285px',
 			'height': '355px'
 		});
 	});
 
-	$('body').on('click', '.popup-container-call', function(event){
+	$('body').on('click', '.popup-container_call, .popup-container__button_close', function(event){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
-			$('.popup-order-call').animate({
+			$('.popup_order-call').animate({
 				'width': '0',
 				'height': '0'
 			});	
@@ -76,18 +76,18 @@ $(function(){
 
 	$('body').on('click', '.examples-block__button, .top-background-block__button, .what-i-to-do-block__button ', function(){
 		disableScroll();
-		$('.popup-container-project').fadeIn();
-		$('.popup-order-project').animate({
+		$('.popup-container_project').fadeIn();
+		$('.popup_order-project').animate({
 			'width': '285px',
 			'height': '435px'
 		});
 	});
 
-	$('body').on('click', '.popup-container-project', function(event){
+	$('body').on('click', '.popup-container_project, .popup-container__button_close', function(event){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
-			$('.popup-order-project').animate({
+			$('.popup_order-project').animate({
 				'width': '0',
 				'height': '0'
 			});	
