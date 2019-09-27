@@ -176,12 +176,10 @@ input::placeholder {
 
 					.header_left__button_close-menu {
 						border: 0;
-						background-image: linear-gradient(to top right, #ff8a5d, #ff2f96);
-						-webkit-background-clip: text;
-						-moz-background-clip: text;
+						background-color: transparent;
+						color: linear-gradient(to top right, #ff8a5d, #ff2f96);
 						font-weight: 700;
 						font-size: 25px;
-						color: transparent;
 						width: 30px;
 						height: 30px;
 						margin: -5px 0 15px -3px;
