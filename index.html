@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Дипломная работа</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+		<div class="popup-container-call">
+			<form class="popup-order-call">
+				<label>Имя*:<br><br><input type="text" name="name" required size="30" placeholder="Ваше имя" pattern="[а-я,А-Я,A-Z,a-z]+"><br><br></label>
+				<label>Номер телефона*:<br><br><input class="popup__input_tel" type="tel" name="telephone" placeholder="9672259408" required size="30" pattern="[0-9]{10}"><br><br></label>
+				<button class="popup-container__button main-btn" type="submit">Отправить</button><br><br>
+				<small>*Поля, отмеченные звездочкой, являются обязательными для заполнения</small>
+			</form>
+		</div>
+		<div class="popup-container-project">
+			<form class="popup-order-project">
+				<label>Имя*:<br><br><input type="text" name="name" required size="30" placeholder="Ваше имя" minlength="3" pattern="[а-я,А-Я,A-Z,a-z]+"><br><br></label>
+				<label>Номер телефона*:<br><br><input class="popup__input_tel" type="tel" name="telephone" placeholder="9672259408" required size="30" pattern="[0-9]{10}"><br><br></label>
+				<label>Адрес электронной почты*:<br><br><input type="email" name="email" required size="30"><br><br></label>
+				<button class="popup-container__button main-btn" type="submit">Отправить</button><br><br>
+				<small>*Поля, отмеченные звездочкой, являются обязательными для заполнения</small>
+			</form>
+		</div>
+
+		<header class="header">
+			<div class="container clearfix">
+				<div class="header_left">
+					<button class="header_left__button_open-menu"><img src="img/nav.png" alt="Меню"></button>
+					<nav class="header_left__nav_mobile">
+						<button class="header_left__button_close-menu">X</button>
+						<ul>
+							<li class="header_left__item_opened-menu"><a href="#service">Услуги</a></li>
+							<li class="header_left__item_opened-menu"><a href="#portfolio">Портфолио</a></li>
+							<li class="header_left__item_opened-menu"><a href="#cost">Стоимость</a></li>
+						</ul>
+					</nav>
+					<nav class="header_left__nav">
+						<ul>
+							<li class="header_left__item_closed-menu"><a class="header_left__link_closed-menu" href="#service">Услуги</a></li>
+							<li class="header_left__item_closed-menu"><a class="header_left__link_closed-menu" href="#portfolio">Портфолио</a></li>
+							<li class="header_left__item_closed-menu"><a class="header_left__link_closed-menu" href="#cost">Стоимость</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header_right">
+					<a class="header_right__link" href="tel:+79852259467">+7 (985) 225-94-67</a>
+					<button class="header_right__button_call-icon"><img src="img/call.png" alt="Звонок"></button>
+					<button class="header_right__button button_call">Заказать звонок</button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="top-background-block">
+				<div class="container">
+					<div class="top-background-block__text_first">
+						<h2 class="top-background-block__heading">Дмитрий Душак</h2>
+						<p class="top-background-block__item">Frontend-разработчик и&nbsp;веб-верстальщик</p>
+						<button class="top-background-block__button main-btn">Узнать больше</button>
+					</div>
+				</div>
+				<div>{ }</div>
+				<div>&lt;div&gt;</div>
+				<div>#</div>
+				<div>&lt;div&gt;</div>
+				<div>&lt;/&gt;</div>
+			</section>
+
+			<section class="top-background-block__text_second container">
+					<h2 class="top-background-block__heading">Дмитрий Душак</h2>
+					<p class="top-background-block__item">Frontend-разработчик и&nbsp;веб-верстальщик</p>
+					<button class="top-background-block__button main-btn">Узнать больше</button>
+			</section>
+		
+			<section class="what-i-to-do-block" id="service">
+				<div class="what-i-to-do-block__flex container">
+					<h3 class="what-i-to-do-block__heading">Что я&nbsp;делаю</h3>
+					<div class="what-i-to-do-block__item">
+						<img src="img/whattodo_1.png" alt="Рисунок монитора">
+						<div class="what-i-to-do-block__description">Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности</div>
+					</div>
+					<div class="what-i-to-do-block__item">
+						<img src="img/whattodo_2.png" alt="Рисунок нескольких устройств">
+						<div class="what-i-to-do-block__description">Адаптивная вёрстка под все браузеры и&nbsp;устройства</div>
+					</div>
+					<div class="what-i-to-do-block__item">
+						<img src="img/whattodo_3.png" alt="Рисунок сайта">
+						<div class="what-i-to-do-block__description">Frontend&mdash;разработка и&nbsp;программирование</div>
+					</div>
+					<div class="what-i-to-do-block__item">
+						<img src="img/whattodo_4.png" alt="Рисунок сайта">
+						<div class="what-i-to-do-block__description">Исправление и&nbsp;доработка существующей вёрстки</div>
+					</div>
+					<button class="what-i-to-do-block__button main-btn">Узнать стоимость</button>
+				</div>
+			</section>
+
+			<section class="examples-block container" id="portfolio">
+				<h3 class="examples-block__heading">Примеры моих работ</h3>
+				<div class="responsive">
+					<div class="examples-block__item">
+						<img class="examples-block__img" src="img/example_1.jpg" alt="Изображение сайта">
+						<div class="examples-block__text">Сайт психолога Веры Антоновой</div>
+					</div>
+					<div class="examples-block__item">
+						<img class="examples-block__img" src="img/example_2.jpg" alt="Изображение сайта">
+						<div class="examples-block__text">Сайт магазина детской одежды</div>
+					</div>
+					<div class="examples-block__item">
+						<img class="examples-block__img" src="img/example_3.jpg" alt="Изображение сайта">
+						<div class="examples-block__text">Сайт магазина &laquo;Рыболов&raquo;</div>
+					</div>
+					<div class="examples-block__item">
+						<img class="examples-block__img" src="img/example_1.jpg" alt="Изображение сайта">
+						<div class="examples-block__text">Сайт психолога Веры Антоновой</div>
+					</div>
+				</div>
+				<button class="examples-block__button main-btn">Заказать проект</button>
+			</section>
+
+			<div class="description-block" id="cost">
+				<div class="description-block__flex container">
+					<p class="description-block__item">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</p>
+					<p class="description-block__item_size-s">* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.</p>
+				</div>
+				<div>{ }</div>
+				<div>#</div>
+				<div>&lt;div&gt;</div>
+				<div>{ }</div>
+				<div>&lt;/&gt;</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="footer_top container">
+				<nav class="footer_top__nav">
+					<ul class="footer_top__ul">
+						<li><a class="footer_top__link_left" href="#service">Услуги</a></li>
+						<li><a class="footer_top__link_left" href="#portfolio">Портфолио</a></li>
+						<li><a class="footer_top__link_left" href="#cost">Стоимость</a></li>
+					</ul>
+				</nav>
+				<div class="footer_top__nav">
+					<ul class="footer_top__ul"> 
+						<li class="footer_top__item">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+							<a class="footer_top__link_center" href="tel:+79852259467">+7 (985) 225-94-67</a>
+						</li>
+						<li class="footer_top__item">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<a class="footer_top__link_center" href="mailto:dushakdima1991@gmail.com?subject=Заказать_проект">dushakdima1991@gmail.com</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<button class="footer_top__button button_call">Заказать звонок</button>
+					<div class="sprite">
+						<a href="https://vk.com" target="_blank" id="sprite_1"></a>
+						<a href="https://www.facebook.com" target="_blank" id="sprite_2"></a>
+						<a href="https://twitter.com" target="_blank" id="sprite_3"></a>
+						<a href="https://www.instagram.com" target="_blank" id="sprite_4"></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="container">
+					<small>© Дмитрий Душак, 2019</small>
+				</div>
+			</div>
+		</footer>
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src="slick/slick.min.js"></script>
+		<script src="scripts.js"> </script>
+	</body>
+</html>

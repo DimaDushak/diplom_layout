@@ -1,0 +1,10 @@
+<svg width="1920" height="680" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient  id="Gradient" x1="0" x2="0" y1="1" y2="0">
+			<stop offset="0" stop-color="#ff895e"/>
+			<stop offset="1" stop-color="#ff2f96"/>
+		</linearGradient>
+	</defs>
+	<path d="M1180 489 C 1199 446 1209 427 1247 371 C 1282 318 1300 295 1345 244 C 1404 177 1432 153 1474 124 C 1521 90 1548 78 1589 64 C 1634 52 1650 46 1692 43 C 1810 42 1850 61 1918 118 C 1977 177 2038 255 2060 335 C 2083 421 2080 479 2045 559 C 2013 630 1974 676 1904 723 C 1863 751 1820 770 1768 784 C 1726 795 1689 800 1624 803 Q 1587 805 1538 803 C 1459 801 1414 793 1339 754 C 1282 759 1248 741 1218 719 C 1178 690 1160 659 1154 620 C 1148 579 1156 543 1180 489" stroke="transparent" fill="url(#Gradient)"/>
+		Sorry, your browser does not support inline SVG.
+</svg>
