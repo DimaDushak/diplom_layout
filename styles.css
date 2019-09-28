@@ -288,7 +288,7 @@
 				  }
 
  		      .top-background-block__img {
-				  padding-top: 102px;
+				  padding-top: 141px;
 			  }
   
 		  .top-background-block :nth-of-type(n+2) {
@@ -701,6 +701,9 @@
 	  .header_left__item {
 		  display: block;
 		  margin: 0 0 15px 0;
+	  }
+	  .top-background-block__flex {
+		  justify-content: flex-end;
 	  }
 	  .top-background-block__text_first {
 		  display: none;
