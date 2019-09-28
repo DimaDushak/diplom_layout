@@ -56,6 +56,7 @@ $(function(){
 
 	$('body').on('click', '.button_call', function(){
 		disableScroll();
+		$('.popup__input_name, .popup__input_tel').removeClass('red');
 		$('.popup-container_call').fadeIn();
 	});
 
@@ -68,6 +69,7 @@ $(function(){
 
 	$('body').on('click', '.examples-block__button, .top-background-block__button, .what-i-to-do-block__button ', function(){
 		disableScroll();
+		$('.popup__input_name, .popup__input_tel, .popup__input_email').removeClass('red');
 		$('.popup-container_project').fadeIn();
 	});
 
@@ -83,19 +85,27 @@ $(function(){
 		$('.popup-container_call, .popup-container_project').fadeOut();
 	});
 
-	$('body').on('click', 'popup-container__button', function(){
-		$('.name, .tel, .email').removeClass('red');
-		var name = $('.name').val(),
-			tel = $('.tel').val(),
-			email = $('.email').val();
+	$('body').on('click', '.popup-container__button', function(){
+		var name = $('.popup__input_name').val(),
+			tel = $('.popup__input_tel').val(),
+			email = $('.popup__input_email').val();
 		if(name.length == 0) {
-			$('.name').addClass('red');
+			$('.popup__input_name').addClass('red');
+		}
+		if(name.length !== 0) {
+			$('.popup__input_name').removeClass('red');
 		}
 		if(tel.length == 0) {
-			$('.tel').addClass('red');
+			$('.popup__input_tel').addClass('red');
+		}
+		if(tel.length !== 0) {
+			$('.popup__input_tel').removeClass('red');
 		}
 		if(email.length == 0) {
-			$('.email').addClass('red');
+			$('.popup__input_email').addClass('red');
+		}
+		if(email.length !== 0) {
+			$('.popup__input_email').removeClass('red');
 		}
 	});
 
