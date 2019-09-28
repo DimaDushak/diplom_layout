@@ -251,8 +251,8 @@
 				justify-content: space-between;
 			}
   
-			  .top-background-block__text_first{
-				  padding-top: 286px;
+			  .top-background-block__text{
+				  padding: 302px 0 237px;
 				  position: relative;
 				  z-index: 5;
 			  }
@@ -265,7 +265,7 @@
   
 				  .top-background-block__item {
 					  font-size: 25px;
-					  margin-top: 14px;
+					  margin-top: 22px;
 				  }
   
 				  .top-background-block__button {
@@ -288,7 +288,7 @@
 				  }
 
  		      .top-background-block__img {
-				  padding-top: 141px;
+				  align-self: flex-end;
 			  }
   
 		  .top-background-block :nth-of-type(n+2) {
@@ -812,7 +812,6 @@
 	  .top-background-block  {
 		  background-size: 940px 65%;
 		  background-position: 90% bottom;
-		  height: 423px;
 	  }
 	  .top-background-block__heading {
 		  font-size: 30px;
