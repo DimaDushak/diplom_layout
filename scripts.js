@@ -2,15 +2,15 @@ $(function(){
 
 	$(document).ready(function(){
 		$('.top-background-block :nth-of-type(2)').css('transform', 'rotate(30deg) translateX(350px)' );
-		$('.top-background-block :nth-of-type(3)').css('transform', 'rotate(-30deg) scale(0.6) translate(-1300px, -650px)');
-		$('.top-background-block :nth-of-type(4)').css('transform', 'rotate(15deg) scale(0.8) translate(500px, 75px)');
-		$('.top-background-block :nth-of-type(5)').css('transform', 'rotate(-25deg) scale(0.88) translate(-1050px, -200px)');
-		$('.top-background-block :nth-of-type(6)').css('transform', 'rotate(15deg) scale(0.7) translate(600px, 150px)');
-		$('.description-block div:nth-child(2)').css('transform', 'rotate(30deg) scale(0.9) translateX(200px)');
-		$('.description-block div:nth-child(3)').css('transform', 'rotate(15deg) scale(0.8) translateX(400px)');
-		$('.description-block div:nth-child(4)').css('transform', 'rotate(30deg) scale(0.8) translateX(-200px)');
+		$('.top-background-block :nth-of-type(3)').css('transform', 'rotate(-30deg) translate(-1300px, -650px)');
+		$('.top-background-block :nth-of-type(4)').css('transform', 'rotate(15deg) translate(500px, 75px)');
+		$('.top-background-block :nth-of-type(5)').css('transform', 'rotate(-25deg) translate(-1050px, -200px)');
+		$('.top-background-block :nth-of-type(6)').css('transform', 'rotate(15deg) translate(600px, 150px)');
+		$('.description-block div:nth-child(2)').css('transform', 'rotate(30deg) translateX(200px)');
+		$('.description-block div:nth-child(3)').css('transform', 'rotate(15deg) translateX(400px)');
+		$('.description-block div:nth-child(4)').css('transform', 'rotate(30deg) translateX(-200px)');
 		$('.description-block div:nth-child(5)').css('transform', 'rotate(-15deg) translate(-250px,-155px)');
-		$('.description-block div:nth-child(6)').css('transform', 'rotate(-30deg) scale(0.7) translate(-200px, -280px)');
+		$('.description-block div:nth-child(6)').css('transform', 'rotate(-30deg) translate(-200px, -280px)');
 		var backButton = '<span class="slick-prev"></span>';
  		var nextButton = '<span class="slick-next"></span>';
 		$('.responsive').slick({
