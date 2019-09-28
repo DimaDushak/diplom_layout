@@ -252,7 +252,7 @@
 			}
   
 			  .top-background-block__text{
-				  padding: 302px 0 237px;
+				  padding: 195px 0 230px;
 				  position: relative;
 				  z-index: 5;
 			  }
@@ -265,11 +265,11 @@
   
 				  .top-background-block__item {
 					  font-size: 25px;
-					  margin-top: 22px;
+					  margin-top: 15px;
 				  }
   
 				  .top-background-block__button {
-					  margin-top: 46px;
+					  margin-top: 39px;
 				  }
   
 				  .main-btn {
