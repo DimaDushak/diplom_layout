@@ -54,7 +54,7 @@ $(function(){
 		$('body').removeClass('fixed');
 	};
 
-	$('body').on('click', '.button_call, .header_right__button_call-icon', function(){
+	$('body').on('click', '.button_call', function(){
 		disableScroll();
 		$('.popup-container_call').fadeIn();
 	});
