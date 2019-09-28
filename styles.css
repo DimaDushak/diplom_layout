@@ -120,6 +120,10 @@
 	  position: fixed;
 	  width: 100%;
   }
+
+  .red {
+	  border-color: red;
+  }
   
   .popup-container_call, .popup-container_project  {
 	  display: none;
@@ -135,6 +139,7 @@
 		  background-color: #fbfbfb;
 		  margin: 100px auto;
 		  width: 285px;
+		  box-shadow: 0, 0, 5px, rgba(0, 0, 0, 0.5);
 	  }
   
 	  .popup_order-call {
@@ -147,9 +152,9 @@
   
 		  .popup-container__button_close {
 			  background: transparent;
-			  color: #f53f4f;
 			  float: right;
 			  border: 0;
+			  padding-right: 10px;
 		  }
   
 		  .popup__input_tel:valid {

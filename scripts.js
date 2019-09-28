@@ -83,6 +83,22 @@ $(function(){
 		$('.popup-container_call, .popup-container_project').fadeOut();
 	});
 
+	$('body').on('click', 'popup-container__button', function(){
+		$('.name, .tel, .email').removeClass('red');
+		var name = $('.name').val(),
+			tel = $('.tel').val(),
+			email = $('.email').val();
+		if(name.length == 0) {
+			$('.name').addClass('red');
+		}
+		if(tel.length == 0) {
+			$('.tel').addClass('red');
+		}
+		if(email.length == 0) {
+			$('.email').addClass('red');
+		}
+	});
+
 	$('body').on('click', '.header_left__button_open-menu', function(){
 		$('.header_left__button_close-menu').show();
 		$('.header_left__nav').show();
