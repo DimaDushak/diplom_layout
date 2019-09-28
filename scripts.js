@@ -84,15 +84,17 @@ $(function(){
 	});
 
 	$('body').on('click', '.header_left__button_open-menu', function(){
-		$('.header_left__button_close-menu').addClass('block');
-		$('.header_left__nav').addClass('block');
+		$('.header_left__button_close-menu, .header_left__nav').css({
+			'display': 'block'
+		});
 		$('.header_left__button_open-menu').hide();
 	});
 
 	$('body').on('click', '.header_left__button_close-menu', function(){
 		$('.header_left__button_open-menu').show();
-		$('.header_left__button_close-menu').removeClass('block');
-		$('.header_left__nav').removeClass('block');
+		$('.header_left__button_close-menu, .header_left__nav').css({
+			'display': 'none'
+		});
 	});
 
 });

@@ -124,10 +124,6 @@
 	  position: fixed;
 	  width: 100%;
   }
-
-  .block {
-	  display: block;
-  }
   
   .popup-container_call, .popup-container_project  {
 	  display: none;
