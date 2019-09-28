@@ -84,15 +84,15 @@ $(function(){
 	});
 
 	$('body').on('click', '.header_left__button_open-menu', function(){
+		$('.header_left__button_open-menu').hide();
 		$('.header_left__button_close-menu').show();
 		$('.header_left__nav').show();
-		$('.header_left__button_open-menu').hide();
 	});
 
 	$('body').on('click', '.header_left__button_close-menu', function(){
+		$('.header_left__button_open-menu').show();
 		$('.header_left__button_close-menu').hide();
 		$('.header_left__nav').hide();
-		$('.header_left__button_open-menu').show();
 	});
 
 });
