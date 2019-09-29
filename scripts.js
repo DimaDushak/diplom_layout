@@ -1,16 +1,16 @@
 $(function(){
 
 	$(document).ready(function(){
-		$('.top-background-block :nth-of-type(2)').css('transform', 'rotate(30deg) translateX(350px)' );
-		$('.top-background-block :nth-of-type(3)').css('transform', 'rotate(-30deg) translate(-1300px, -650px)');
-		$('.top-background-block :nth-of-type(4)').css('transform', 'rotate(15deg) translate(500px, 75px)');
-		$('.top-background-block :nth-of-type(5)').css('transform', 'rotate(-25deg) translate(-1050px, -200px)');
-		$('.top-background-block :nth-of-type(6)').css('transform', 'rotate(15deg) translate(600px, 150px)');
-		$('.description-block div:nth-child(2)').css('transform', 'rotate(30deg) translateX(200px)');
-		$('.description-block div:nth-child(3)').css('transform', 'rotate(15deg) translateX(400px)');
-		$('.description-block div:nth-child(4)').css('transform', 'rotate(30deg) translateX(-200px)');
-		$('.description-block div:nth-child(5)').css('transform', 'rotate(-15deg) translate(-250px,-155px)');
-		$('.description-block div:nth-child(6)').css('transform', 'rotate(-30deg) translate(-200px, -280px)');
+		$('.top-background-block :nth-of-type(2)').css('transform', 'rotate(30deg) translate(200px, -12px)');
+		$('.top-background-block :nth-of-type(3)').css('transform', 'rotate(-15deg) translate(-1050px, -100px)');
+		$('.top-background-block :nth-of-type(4)').css('transform', 'rotate(15deg) translate(300px, -25px)');
+		$('.top-background-block :nth-of-type(5)').css('transform', 'rotate(20deg) translate(-885px, 350px)');
+		$('.top-background-block :nth-of-type(6)').css('transform', 'rotate(-20deg) translate(420px, 120px)');
+		$('.description-block div:nth-child(2)').css('transform', 'rotate(27deg) translate(175px, -110px)');
+		$('.description-block div:nth-child(3)').css('transform', 'rotate(15deg) translate(295px, 20px)');
+		$('.description-block div:nth-child(4)').css('transform', 'rotate(20deg) translate(-520px, -30px)');
+		$('.description-block div:nth-child(5)').css('transform', 'rotate(-20deg) translate(-170px, -50px)');
+		$('.description-block div:nth-child(6)').css('transform', 'rotate(-20deg) translate(-270px, -95px)');
 		var backButton = '<span class="slick-prev"></span>';
  		var nextButton = '<span class="slick-next"></span>';
 		$('.responsive').slick({
@@ -46,12 +46,10 @@ $(function(){
 
 	function disableScroll(){
 		$('html, body').addClass('hidden');
-		$('body').addClass('fixed');
 	};
 
 	function enableScroll(){
 		$('html, body').removeClass('hidden');
-		$('body').removeClass('fixed');
 	};
 
 	$('body').on('click', '.button_call', function(){
@@ -113,12 +111,14 @@ $(function(){
 		$('.header_left__button_close-menu').show();
 		$('.header_left__nav').show();
 		$('.header_left__button_open-menu').hide();
+		$('.header_right').addClass('flex-start');
 	});
 
 	$('body').on('click', '.header_left__button_close-menu', function(){
 		$('.header_left__button_close-menu').hide();
 		$('.header_left__nav').hide();
 		$('.header_left__button_open-menu').show();
+		$('.header_right').removeClass('flex-start');
 	});
 
 });
