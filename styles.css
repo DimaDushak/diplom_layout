@@ -221,7 +221,7 @@
   
 				  .header_left__item {
 					  display: inline-block;
-					  margin-right: 30px;
+					  margin-right: 29px;
 				  }
 
 		      .header_right {
@@ -232,6 +232,7 @@
 				  .header_right__link {
 					  font-size: 25px;
 					  font-weight: 700;
+					  margin-top: -3px;
 				  }
   
 				  .button_call {
@@ -240,7 +241,7 @@
 					  border: 1px solid #f82370;
 					  width: 207px;
 					  height: 45px;
-					  margin-left: 25px;
+					  margin-left: 28px;
 				  }
   
 				  .button_call:hover {
@@ -264,7 +265,7 @@
 			}
   
 			  .top-background-block__text_first {
-				  padding-top: 302px;
+				  padding-top: 286px;
 				  position: relative;
 				  z-index: 5;
 			  }
@@ -277,11 +278,11 @@
   
 				  .top-background-block__item {
 					  font-size: 25px;
-					  margin-top: 22px;
+					  margin-top: 14px;
 				  }
   
 				  .top-background-block__button {
-					  margin-top: 46px;
+					  margin-top: 45px;
 				  }
   
 				  .main-btn {

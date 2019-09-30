@@ -54,7 +54,7 @@ $(function(){
 
 	$('body').on('click', '.button_call', function(){
 		disableScroll();
-		$('.popup__input_name, .popup__input_tel').removeClass('red');
+		$('.popup__input_name_call, .popup__input_tel_call').removeClass('red');
 		$('.popup-container_call').fadeIn();
 	});
 
@@ -62,12 +62,13 @@ $(function(){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
+			$('.popup__input_name_call, .popup__input_tel_call').val('');
 		}
 	});
 
 	$('body').on('click', '.examples-block__button, .top-background-block__button, .what-i-to-do-block__button ', function(){
 		disableScroll();
-		$('.popup__input_name, .popup__input_tel, .popup__input_email').removeClass('red');
+		$('.popup__input_name_project, .popup__input_tel_project, .popup__input_email').removeClass('red');
 		$('.popup-container_project').fadeIn();
 	});
 
@@ -75,29 +76,51 @@ $(function(){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
+			$('.popup__input_name_project, .popup__input_tel_project, .popup__input_email').val('');
 		}
 	});
 
 	$('body').on('click', '.popup-container__button_close', function(){
 		enableScroll();
 		$('.popup-container_call, .popup-container_project').fadeOut();
+		$('.popup__input_name_call, .popup__input_name_project, .popup__input_tel_call, .popup__input_tel_project, .popup__input_email').val('');
 	});
 
 	$('body').on('click', '.popup-container__button', function(){
-		var name = $('.popup__input_name').val(),
-			tel = $('.popup__input_tel').val(),
+		var nameCall = $('.popup__input_name_call').val(),
+			nameProject = $('.popup__input_name_project').val(),
+			telCall = $('.popup__input_tel_call').val(),
+			telProject = $('.popup__input_tel_project').val(),
 			email = $('.popup__input_email').val();
-		if(name.length == 0) {
-			$('.popup__input_name').addClass('red');
+		if(nameCall.length == 0) {
+			$('.popup__input_name_call').addClass('red');
 		}
-		if(name.length !== 0) {
-			$('.popup__input_name').removeClass('red');
+		if(nameCall.length !== 0) {
+			$('.popup__input_name_call').removeClass('red');
 		}
-		if(tel.length == 0) {
-			$('.popup__input_tel').addClass('red');
+		if(nameProject.length == 0) {
+			$('.popup__input_name_project').addClass('red');
 		}
-		if(tel.length !== 0) {
-			$('.popup__input_tel').removeClass('red');
+		if(nameProject.length !== 0) {
+			$('.popup__input_name_call_project').removeClass('red');
+		}
+		if(telCall.length < 10) {
+			$('.popup__input_tel_call').addClass('red');
+		}
+		if(telCall.length > 10) {
+			$('.popup__input_tel_call').addClass('red');
+		}
+		if(telCall.length == 10) {
+			$('.popup__input_tel_call').removeClass('red');
+		}
+		if(telProject.length < 10) {
+			$('.popup__input_tel_project').addClass('red');
+		}
+		if(telProject.length > 10) {
+			$('.popup__input_tel_project').addClass('red');
+		}
+		if(telProject.length == 10) {
+			$('.popup__input_tel_project').removeClass('red');
 		}
 		if(email.length == 0) {
 			$('.popup__input_email').addClass('red');
