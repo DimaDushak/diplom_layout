@@ -5,8 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="swiper.min.css"/>
 		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -18,20 +17,48 @@
 	</head>
 	<body>
 		<div class="popup-container_call">
-			<form class="popup_order-call">
-				<button class="popup-container__button_close">X</button><label>Имя*:<br><br><input class="popup__input_name_call" type="text" name="name" required size="28" placeholder=" Ваше имя" pattern="[а-я,А-Я,A-Z,a-z]+"><br><br></label>
-				<label>Номер телефона*:<br><br><input class="popup__input_tel_call" type="tel" name="telephone" placeholder=" 96XXXXXXXX" required size="28" pattern="[0-9]{10}"><br><br></label>
-				<button class="popup-container__button button_call" type="submit">Отправить</button><br><br>
-				<small>*Поля, отмеченные звездочкой, являются обязательными для заполнения</small>
+			<form class="popup-container__form">
+				<input type="hidden" name="project_name" value="dushakdmitriy.ru">
+				<input type="hidden" name="admin_email" value="dushakdima1991@gmail.com">
+				<input type="hidden" name="form_subject" value="Контактные данные заказчика">
+				<h2 class="popup-container__heading">Форма для обратной связи</h2>
+				<button class="popup-container__button_close">X</button>
+				<label class="popup-container__label">
+					<span>Имя:</span>
+					<input class="popup-container__input" type="text" name="Имя" required size="28" pattern="[а-я,А-Я,A-Z,a-z]+">
+				</label>
+				<br>
+				<label class="popup-container__label">
+					<span>Номер телефона:</span>
+					<input class="popup-container__input" type="tel" name="Телефон" placeholder=" +7 (___) ___-__-__" required size="28">
+				</label>
+				<br>
+				<button class="popup-container__button button_call" type="submit">Отправить</button>
 			</form>
 		</div>
 		<div class="popup-container_project">
-			<form class="popup_order-project">
-				<button class="popup-container__button_close">X</button><label>Имя*:<br><br><input class="popup__input_name_project" type="text" name="name" required size="28" placeholder=" Ваше имя" pattern="[а-я,А-Я,A-Z,a-z]+"><br><br></label>
-				<label>Номер телефона*:<br><br><input class="popup__input_tel_project" type="tel" name="telephone" placeholder=" 96XXXXXXXX" required size="28" pattern="[0-9]{10}"><br><br></label>
-				<label>Адрес электронной почты*:<br><br><input class="popup__input_email" type="email" name="email" placeholder=" E-mail" required size="28"><br><br></label>
-				<button class="popup-container__button button_call" type="submit">Отправить</button><br><br>
-				<small>*Поля, отмеченные звездочкой, являются обязательными для заполнения</small>
+			<form class="popup-container__form">
+				<input type="hidden" name="project_name" value="dushakdmitriy.ru">
+				<input type="hidden" name="admin_email" value="dushakdima1991@gmail.com">
+				<input type="hidden" name="form_subject" value="Контактные данные заказчика">
+				<h2 class="popup-container__heading">Форма для обратной связи</h2>
+				<button class="popup-container__button_close">X</button>
+				<label class="popup-container__label">
+					<span>Имя:</span>
+					<input class="popup-container__input" type="text" name="Имя" required size="28" pattern="[а-я,А-Я,A-Z,a-z]+">
+				</label>
+				<br>
+				<label class="popup-container__label">
+					<span>Номер телефона:</span>
+					<input class="popup-container__input" type="tel" name="Телефон" placeholder=" +7 (___) ___-__-__" required size="28">
+				</label>
+				<br>
+				<label class="popup-container__label">
+					<span>Адрес электронной почты:</span>
+					<input class="popup-container__input" type="email" name="Почта" required size="28">
+				</label>
+				<br>
+				<button class="popup-container__button button_call" type="submit">Отправить</button>
 			</form>
 		</div>
 
@@ -42,9 +69,9 @@
 					<button class="header_left__button_close-menu">X</button>
 					<nav class="header_left__nav">
 						<ul>
-							<li class="header_left__item"><a href="#service">Услуги</a></li>
-							<li class="header_left__item"><a href="#portfolio">Портфолио</a></li>
-							<li class="header_left__item"><a href="#cost">Стоимость</a></li>
+							<li class="header_left__item"><a class="header_left__link" href="#service">Услуги</a></li>
+							<li class="header_left__item"><a class="header_left__link" href="#portfolio">Портфолио</a></li>
+							<li class="header_left__item"><a class="header_left__link" href="#cost">Стоимость</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -63,12 +90,13 @@
 						<p class="top-background-block__item">Frontend-разработчик и&nbsp;веб-верстальщик</p>
 						<button class="top-background-block__button main-btn">Узнать больше</button>
 					</div>
-					<img class="top-background-block__img" src="img/myphoto.png">
+					<img class="top-background-block__img" src="img/myphoto.png" alt="Дмитрий Душак (фото)">
 				</div>
 				<div>{ }</div>
 				<div>&lt;div&gt;</div>
 				<div>#</div>
 				<div>&lt;div&gt;</div>
+				<div>&lt;/&gt;</div>
 				<div>&lt;/&gt;</div>
 			</section>
 
@@ -81,55 +109,61 @@
 			<section class="what-i-to-do-block" id="service">
 				<div class="what-i-to-do-block__flex container">
 					<h3 class="what-i-to-do-block__heading">Что я&nbsp;делаю</h3>
-					<div class="what-i-to-do-block__item">
-						<img src="img/whattodo_1.png" alt="Рисунок монитора">
-						<div class="what-i-to-do-block__description">Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности</div>
-					</div>
-					<div class="what-i-to-do-block__item">
-						<img src="img/whattodo_2.png" alt="Рисунок нескольких устройств">
-						<div class="what-i-to-do-block__description">Адаптивная вёрстка под все браузеры и&nbsp;устройства</div>
-					</div>
-					<div class="what-i-to-do-block__item">
-						<img src="img/whattodo_3.png" alt="Рисунок сайта">
-						<div class="what-i-to-do-block__description">Frontend&mdash;разработка и&nbsp;программирование</div>
-					</div>
-					<div class="what-i-to-do-block__item">
-						<img src="img/whattodo_4.png" alt="Рисунок сайта">
-						<div class="what-i-to-do-block__description">Исправление и&nbsp;доработка существующей вёрстки</div>
+					<div class="what-i-to-do-block__items">
+						<div class="what-i-to-do-block__item">
+							<img class="what-i-to-do-block__img" src="img/whattodo_1.png" alt="Рисунок монитора">
+							<p class="what-i-to-do-block__description">Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности</p>
+						</div>
+						<div class="what-i-to-do-block__item">
+							<img class="what-i-to-do-block__img" src="img/whattodo_2.png" alt="Рисунок нескольких устройств">
+							<p class="what-i-to-do-block__description">Адаптивная вёрстка под все браузеры и&nbsp;устройства</p>
+						</div>
+						<div class="what-i-to-do-block__item">
+							<img class="what-i-to-do-block__img" src="img/whattodo_3.png" alt="Рисунок сайта">
+							<p class="what-i-to-do-block__description">Frontend&mdash;разработка и&nbsp;программирование</p>
+						</div>
+						<div class="what-i-to-do-block__item">
+							<img class="what-i-to-do-block__img" src="img/whattodo_4.png" alt="Рисунок сайта">
+							<p class="what-i-to-do-block__description">Исправление и&nbsp;доработка существующей вёрстки</p>
+						</div>
 					</div>
 					<button class="what-i-to-do-block__button main-btn">Узнать стоимость</button>
 				</div>
 			</section>
 
-			<section class="examples-block container" id="portfolio">
+			<section class="examples-block container " id="portfolio">
 				<h3 class="examples-block__heading">Примеры моих работ</h3>
-				<div class="responsive">
-					<div class="examples-block__item">
-						<img class="examples-block__img" src="img/example_1.jpg" alt="Изображение сайта">
-						<div class="examples-block__text">Сайт психолога Веры Антоновой</div>
-					</div>
-					<div class="examples-block__item">
-						<img class="examples-block__img" src="img/example_2.jpg" alt="Изображение сайта">
-						<div class="examples-block__text">Сайт магазина детской одежды</div>
-					</div>
-					<div class="examples-block__item">
-						<img class="examples-block__img" src="img/example_3.jpg" alt="Изображение сайта">
-						<div class="examples-block__text">Сайт магазина &laquo;Рыболов&raquo;</div>
-					</div>
-					<div class="examples-block__item">
-						<img class="examples-block__img" src="img/example_1.jpg" alt="Изображение сайта">
-						<div class="examples-block__text">Сайт психолога Веры Антоновой</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="examples-block__img" src="img/example_1.jpg" alt="Изображение сайта">
+							<p class="examples-block__text">Сайт психолога Веры Антоновой</p>
+						</div>
+						<div class="swiper-slide">
+							<img class="examples-block__img" src="img/example_2.jpg" alt="Изображение сайта">
+							<p class="examples-block__text">Сайт магазина детской одежды</p>
+						</div>
+						<div class="swiper-slide">
+							<img class="examples-block__img" src="img/example_3.jpg" alt="Изображение сайта">
+							<p class="examples-block__text">Сайт магазина &laquo;Рыболов&raquo;</p>
+						</div>
 					</div>
 				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-pagination"></div>
 				<button class="examples-block__button main-btn">Заказать проект</button>
 			</section>
 
 			<div class="description-block" id="cost">
-				<div class="description-block__flex container">
+				<div class="description-block__fixed container">
 					<p class="description-block__item">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</p>
-					<p class="description-block__item_size-s">* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.</p>
+					<div class="description-block__item_size-s">
+						<p>*</p>
+						<p>Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.</p>
+					</div>
 				</div>
-				<div>{ }</div>
+				<div class="description-block__tag">{ }</div>
 				<div>#</div>
 				<div>&lt;div&gt;</div>
 				<div>{ }</div>
@@ -139,20 +173,20 @@
 
 		<footer>
 			<div class="footer_top container">
-				<nav class="footer_top__nav">
-					<ul class="footer_top__ul">
-						<li><a class="footer_top__link_left" href="#service">Услуги</a></li>
-						<li><a class="footer_top__link_left" href="#portfolio">Портфолио</a></li>
-						<li><a class="footer_top__link_left" href="#cost">Стоимость</a></li>
+				<nav class="footer_top__nav_thirst">
+					<ul>
+						<li class="footer_top__item_left"><a class="footer_top__link_left" href="#service">Услуги</a></li>
+						<li class="footer_top__item_left"><a class="footer_top__link_left" href="#portfolio">Портфолио</a></li>
+						<li class="footer_top__item_left"><a class="footer_top__link_left" href="#cost">Стоимость</a></li>
 					</ul>
 				</nav>
-				<div class="footer_top__nav">
-					<ul class="footer_top__ul"> 
-						<li class="footer_top__item">
+				<div class="footer_top__nav_second">
+					<ul> 
+						<li class="footer_top__item_center">
 							<i class="fa fa-phone" aria-hidden="true"></i>
 							<a class="footer_top__link_center" href="tel:+79852259467">+7 (985) 225-94-67</a>
 						</li>
-						<li class="footer_top__item">
+						<li class="footer_top__item_center">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 							<a class="footer_top__link_center" href="mailto:dushakdima1991@gmail.com?subject=Заказать_проект">dushakdima1991@gmail.com</a>
 						</li>
@@ -169,13 +203,13 @@
 				</div>
 			</div>
 			<div class="footer_bottom">
-				<div class="container">
-					<small>© Дмитрий Душак, 2019</small>
-				</div>
+				<div class="footer_bottom__text container">© Дмитрий Душак, 2019</div>
 			</div>
 		</footer>
 		<script src="jquery-3.4.1.min.js"></script>
-		<script src="slick/slick.min.js"></script>
+		<script src="jquery.inputmask.min.js"></script>
+		<script src="jquery.validate.min.js"></script>
+		<script src="swiper.min.js"></script>
 		<script src="scripts.js"> </script>
 	</body>
 </html>

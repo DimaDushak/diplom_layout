@@ -1,47 +1,79 @@
 $(function(){
 
 	$(document).ready(function(){
-		$('.top-background-block :nth-of-type(2)').css('transform', 'rotate(30deg) translate(200px, -12px)');
-		$('.top-background-block :nth-of-type(3)').css('transform', 'rotate(-15deg) translate(-1050px, -100px)');
-		$('.top-background-block :nth-of-type(4)').css('transform', 'rotate(15deg) translate(300px, -25px)');
-		$('.top-background-block :nth-of-type(5)').css('transform', 'rotate(20deg) translate(-885px, 350px)');
-		$('.top-background-block :nth-of-type(6)').css('transform', 'rotate(-20deg) translate(420px, 120px)');
-		$('.description-block div:nth-child(2)').css('transform', 'rotate(27deg) translate(175px, -110px)');
-		$('.description-block div:nth-child(3)').css('transform', 'rotate(15deg) translate(295px, 20px)');
-		$('.description-block div:nth-child(4)').css('transform', 'rotate(20deg) translate(-520px, -30px)');
-		$('.description-block div:nth-child(5)').css('transform', 'rotate(-20deg) translate(-170px, -50px)');
-		$('.description-block div:nth-child(6)').css('transform', 'rotate(-20deg) translate(-270px, -95px)');
-		var backButton = '<span class="slick-prev"></span>';
- 		var nextButton = '<span class="slick-next"></span>';
-		$('.responsive').slick({
-			  dots: true,
-			  infinite: false,
-			  speed: 300,
-			  slidesToShow: 3,
-			  slidesToScroll: 3,
-			  prevArrow: backButton,
-   			  nextArrow: nextButton,
-			  responsive: [
-			    {
-			      breakpoint: 991,
-			      settings: {
-			        slidesToShow: 2,
-			        slidesToScroll: 2,
-			        infinite: true,
-			        dots: true,
-			        arrows: false
-			      }
-			    },
-			    {
-			      breakpoint: 575,
-			      settings: {
-			        slidesToShow: 1,
-			        slidesToScroll: 1,
-			        arrows: false
-			      }
-			    },
-			  ]
+
+		$('.top-background-block :nth-of-type(2)').css('transform', 'rotate(30deg) translate(193px, -12px)');
+		$('.top-background-block :nth-of-type(3)').css('transform', 'rotate(-15deg) translate(-1132px, -154px)');
+		$('.top-background-block :nth-of-type(4)').css('transform', 'rotate(15deg) translate(290px, -35px)');
+		$('.top-background-block :nth-of-type(5)').css('transform', 'rotate(20deg) translate(-908px, 300px)');
+		$('.top-background-block :nth-of-type(6)').css('transform', 'rotate(-21deg) translate(404px, 121px)');
+		$('.top-background-block :nth-of-type(7)').css('transform', 'rotate(15deg) translate(478px, -87px)')
+		$('.description-block__tag').css('transform', 'rotate(27deg) translate(165px, -57px)');
+		$('.description-block div:nth-child(3)').css('transform', 'rotate(15deg) translate(290px, -28px)');
+		$('.description-block div:nth-child(4)').css('transform', 'rotate(20deg) translate(-525px, -30px)');
+		$('.description-block div:nth-child(5)').css('transform', 'rotate(-20deg) translate(-170px, -55px)');
+		$('.description-block div:nth-child(6)').css('transform', 'rotate(-21deg) translate(-280px, -48px)');
+
+		$('input[type="tel"]').inputmask({"mask": "+7 (999) 999-9999"});
+
+		$('form').each(function(){
+			$(this).validate({
+				errorPlacement(error, element) {
+					return true;
+				},
+				focusInvalid: false,
+				rules: {
+					Имя: {
+						required: true
+					},
+					Телефон: {
+						required: true,
+					},
+					Почта: {
+						required: true,
+						email: true
+					}
+				},
+				submitHandler(form) {
+					let th = $(form);
+
+					$.ajax({
+						type: 'POST',
+						url: 'mail.php',
+						data: th.serialize(),
+					}).done(() => {
+
+						th.trigger('reset');
+					});
+
+					return false;
+				}
 			});
+		});
+
+		var mySwiper = new Swiper ('.swiper-container', {
+			direction: 'horizontal',
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			navigation: {
+			  nextEl: '.swiper-button-next',
+			  prevEl: '.swiper-button-prev'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true
+			  },
+			breakpoints: {
+				599: {
+					slidesPerView: 2
+				},
+				1042: {
+					slidesPerView: 3
+				}
+			}
+		  });
 	});
 
 	function disableScroll(){
@@ -54,7 +86,6 @@ $(function(){
 
 	$('body').on('click', '.button_call', function(){
 		disableScroll();
-		$('.popup__input_name_call, .popup__input_tel_call').removeClass('red');
 		$('.popup-container_call').fadeIn();
 	});
 
@@ -62,13 +93,11 @@ $(function(){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
-			$('.popup__input_name_call, .popup__input_tel_call').val('');
 		}
 	});
 
 	$('body').on('click', '.examples-block__button, .top-background-block__button, .what-i-to-do-block__button ', function(){
 		disableScroll();
-		$('.popup__input_name_project, .popup__input_tel_project, .popup__input_email').removeClass('red');
 		$('.popup-container_project').fadeIn();
 	});
 
@@ -76,58 +105,12 @@ $(function(){
 		if(event.target == this) {
 			enableScroll();
 			$(this).fadeOut();
-			$('.popup__input_name_project, .popup__input_tel_project, .popup__input_email').val('');
 		}
 	});
 
 	$('body').on('click', '.popup-container__button_close', function(){
 		enableScroll();
 		$('.popup-container_call, .popup-container_project').fadeOut();
-		$('.popup__input_name_call, .popup__input_name_project, .popup__input_tel_call, .popup__input_tel_project, .popup__input_email').val('');
-	});
-
-	$('body').on('click', '.popup-container__button', function(){
-		var nameCall = $('.popup__input_name_call').val(),
-			nameProject = $('.popup__input_name_project').val(),
-			telCall = $('.popup__input_tel_call').val(),
-			telProject = $('.popup__input_tel_project').val(),
-			email = $('.popup__input_email').val();
-		if(nameCall.length == 0) {
-			$('.popup__input_name_call').addClass('red');
-		}
-		if(nameCall.length !== 0) {
-			$('.popup__input_name_call').removeClass('red');
-		}
-		if(nameProject.length == 0) {
-			$('.popup__input_name_project').addClass('red');
-		}
-		if(nameProject.length !== 0) {
-			$('.popup__input_name_call_project').removeClass('red');
-		}
-		if(telCall.length < 10) {
-			$('.popup__input_tel_call').addClass('red');
-		}
-		if(telCall.length > 10) {
-			$('.popup__input_tel_call').addClass('red');
-		}
-		if(telCall.length == 10) {
-			$('.popup__input_tel_call').removeClass('red');
-		}
-		if(telProject.length < 10) {
-			$('.popup__input_tel_project').addClass('red');
-		}
-		if(telProject.length > 10) {
-			$('.popup__input_tel_project').addClass('red');
-		}
-		if(telProject.length == 10) {
-			$('.popup__input_tel_project').removeClass('red');
-		}
-		if(email.length == 0) {
-			$('.popup__input_email').addClass('red');
-		}
-		if(email.length !== 0) {
-			$('.popup__input_email').removeClass('red');
-		}
 	});
 
 	$('body').on('click', '.header_left__button_open-menu', function(){
